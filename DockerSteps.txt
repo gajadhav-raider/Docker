@@ -1,0 +1,16 @@
+steps for docker:
+1)open cmd and write docker version and enter
+2)docker run hello-world //the creating and run the hello-world image
+3)docker run redis
+4)docker create hello-world
+5)docker kill Container Id
+6)docker stop Container Id
+7)# step1 specify the base image
+FROM alpine
+#dowonload and install the dependencies
+RUN apk add --update redis
+#setup the startup Commond
+CMD ["redis-server"]
+9)docker build .
+10)docker build -t naktu/redis:latest .
+11)docker run naktu/redis
